@@ -1,0 +1,42 @@
+create table employeesHW(
+	id serial primary key,
+	employee_name varchar(50) not null
+	);
+	
+insert into employees(employee_name)
+values('name'),
+values('name1'),
+values('name2'),
+values('name3'),
+values('name4'),
+values('name5'),
+values('name6'),
+values('name7'),
+values('name8'),
+values('name9'),
+values('name10');
+
+select * from emloyeesHW;
+
+create table salaryHW(
+	id serial primary key,
+	monthly_salary int not null
+	);
+	
+insert into salaryHW(monthly_salary)		
+values (1000),
+(1100),
+(1200),
+(1300),
+(1400),
+(1500),
+(1600),
+(1700),
+(1800),
+(1900),
+(2000),
+(2100),
+(2200),
+(2300),
+(2400),
+(2500);
