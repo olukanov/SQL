@@ -1,0 +1,63 @@
+create table salary(		
+	id serial primary key,	
+	monthly_salary int not null	
+	);	
+		
+select * from salary;		
+		
+create table roles(		
+	id serial primary key,	
+	role_title varchar(50) unique not null	
+	);	
+
+select * from roles;
+		
+create table roles_salary (		
+	id serial primary key,	
+	id_role int not null,	
+	id_salary int not null,	
+	foreighn key (id_role)	
+		references roldes(id),
+	foreighn key (id_salary)	
+		references salary(id)
+);		
+			
+		
+		
+insert into salary(id, monthly_salary)		
+values (2, 2000);		
+		
+insert into salary(id, monthly_salary)		
+values (default, 1600),		
+values (default, 1700),		
+values (default, 1800);		
+		
+insert into salary(monthly_salary)		
+values (3300),		
+	(3300),	
+	(2300),	
+	(3300);	
+
+select * from salary;
+
+alter table roles
+add column taxi;
+
+update salary
+set monthly_salary 5000
+where id = 1;
+
+insert into roles(role_title)		
+values ('QA_manual_junior'),		
+values ('QA_manual_middle'),		
+values ('QA_manual_senior'),		
+values ('Java_developer_junior'),		
+values ('Java_developer_middle'),		
+values ('Java_developer_senior'),		
+values ('Manager');		
+				
+insert into roles_salary(id_role, id_salary)		
+values (1,4),		
+		(3,1),
+		(2,5),
+		(4,3);
