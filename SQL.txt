@@ -61,3 +61,52 @@ values (1,4),
 		(3,1),
 		(2,5),
 		(4,3);
+
+create table City(
+	id serial,
+	title varchar(50)
+	);
+
+create table Person(
+	person_name varchar(50),
+	id serial
+	);
+
+drop table person;
+
+select * from Person;
+
+insert into City(title)
+	values('Berlin'),
+			('Tokio'),
+			('Antaliya'),
+			('Paris'),
+			('Roma');
+			
+insert into Person(person_name, id)
+	values ('Victor', 1),
+		('Elena', 2),
+		('Anna', 1),
+		('Vadim', 3),
+		('Ivan', 7),
+		('Irina', 9);
+		
+select * from person 
+inner join city 
+on person.id = City.id; 
+
+select person_name, title, person.id from person 
+inner join city 
+on person.id = City.id; 
+
+select * from person 
+inner join city 
+on person.id = City.id; 
+
+select person.person_name, person.id, city.title, city.id from
+person left outer join city 
+on person.id = city.id
+
+
+
+	
